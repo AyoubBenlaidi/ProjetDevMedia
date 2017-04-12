@@ -1,0 +1,84 @@
+begin header
+axis custom X 0 10 10 Y 0 10 10 Z 0 10 10
+axisscalefactor .7
+axiscolor x .3 .3 .3
+axiscolor y .3 .3 .3
+axiscolor z .3 .3 .3
+end header
+
+begin script
+
+disable backfacecull
+color3f 0.5 0.33 0
+scale 1 1 1
+
+#socle
+pushmatrix
+	translate 2.5 5 0.75
+	scale 5 10 1.5
+	volume box
+popmatrix
+
+scale 1 1 1
+
+#bras axes
+pushmatrix
+	translate 0.25 2.95 5.5
+	rotatef 60 1 0 0
+	scale 0.5 10 1
+	volume box
+popmatrix
+
+scale 1 1 1
+
+#bras axe y
+pushmatrix
+	translate 0.25 7.05 5.5
+	rotatef 120 1 0 0
+	scale 0.5 10 1
+	volume box
+popmatrix
+
+scale 1 1 1
+
+#bras axe x
+pushmatrix
+	translate 4.75 2.95 5.5
+	rotatef 60 1 0 0
+	scale 0.5 10 1
+	volume box
+popmatrix
+
+scale 1 1 1
+
+#bras sans axe
+pushmatrix
+	translate 4.75 7.05 5.5
+	rotatef 120 1 0 0
+	scale 0.5 10 1
+	volume box
+popmatrix
+
+scale 1 1 1
+color3f 0.45 0.45 0.45
+
+#essieu
+pushmatrix
+	translate 2.5 5 8.9
+	rotatef 90 0 1 0
+	scale 1 1 4.5
+	volume cylinder 20 true true
+popmatrix
+
+scale 1 1 1
+color3f 0.5 0.33 0
+
+#bras de lancer
+pushmatrix
+	translate 2.5 7.5 8.9
+	rotatef 90 1 0 0
+	scale 0.7 0.7 10
+	volume cylinder 20 true true
+popmatrix
+
+end script
