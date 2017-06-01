@@ -2,24 +2,20 @@
 #define PARTIE_H
 #include "joueur.h"
 #include <QTime>
-#include "map"
+#include "cible.h"
 
 using namespace std;
 
 class Partie
 {
-private:
-    QTime startTime_ ;
-    map<int , Joueur > tabScores_;
 public:
+
+    int score_;
+    Cible* niveaux_[10] ; // 10 niveaux
     Partie();
-
-
-    float getDuree();
-    void setDuree(QTime duree){startTime_=duree ;}
-
-    map<int , Joueur > getTabScores() {return tabScores_ ;}
-    void addPlayer(Joueur j);
+    void genererNiveaux(void);
+    int getScore(){return score_;}
+    void setScore(int s){score_=s;}
 };
 
 #endif // PARTIE_H

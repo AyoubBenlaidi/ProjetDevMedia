@@ -9,7 +9,7 @@ using namespace std;
 class Joueur
 {
 private:
-    int Score_ ;
+    int Score_=1000 ;
     string nom_ ;
     QTime tempsDeJeuTotal_ ;
     map<int , QTime > tempsdeJeuParPartie_;

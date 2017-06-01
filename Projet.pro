@@ -15,13 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     scenedejeu.cpp \
-    joueur.cpp \
-    partie.cpp
+    partie.cpp \
+    cible.cpp
 
 HEADERS  += mainwindow.h \
     scenedejeu.h \
-    joueur.h \
-    partie.h
+    partie.h \
+    cible.h
 
 FORMS    += mainwindow.ui
 
