@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>../../../Téléchargements/grass-free-texture.tiff</file>
+    </qresource>
+</RCC>
