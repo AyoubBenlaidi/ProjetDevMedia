@@ -6,6 +6,7 @@
 #include "opencv2/opencv.hpp"
 #include <QWidget>
 #include "partie.h"
+#include "scenedejeu.h"
 
 using namespace cv;
 
@@ -19,32 +20,32 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+private:
+    Mat templateImage_;
+    Mat frame_;
+    VideoCapture *cam_ =new VideoCapture(0);
+    Partie partie_ ;
+    int nombrecible_=10;
+    int score_=0;
+    int seconds_=0;
+    double vitesseMain_=0;
+    //position de la main [ x entre 0 et 512 ] [ y entre 0 et 280 ]
+    int coordx_;
+    int coordy_;
+
 
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    Mat templateImage_;
-    int frameWidth_;
-    int frameHeight_;
-    int templateWidth_=128;
-    int templateHeight_=128;
-    Mat frame;
-    int duree=0;
-    VideoCapture *cam_ =new VideoCapture(0);
     Ui::MainWindow *ui;
-    Partie partie_ ;
-    int sec=0;
-    int nombrecible_=5;
-    int score_=10;
-
-
+    void setNombreCible(int n){nombrecible_=n;}
+    void setScore(int s){score_=s;}
 
 private slots:
     void setTemplate(void);
     void myMatchTemplate(void);
-    void up(void);
-    void updatescore(void);
-    void updatecible(void);
+    void updateTime(void);
+    void updateScoreCible(void);
 
 };
 

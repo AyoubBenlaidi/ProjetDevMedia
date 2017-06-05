@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/grass-small.png</file>
+        <file>images/fence.bmp</file>
+        <file>images/wood.bmp</file>
+        <file>images/TSE.bmp</file>
+        <file>images/target2.bmp</file>
+    </qresource>
+</RCC>
